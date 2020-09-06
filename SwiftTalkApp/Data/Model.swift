@@ -12,6 +12,25 @@ import Model
 
 extension CollectionView: Identifiable {}
 
+extension CollectionView {
+    var episodeCountAndTotalDuration: String {
+        "\(episodes_count) episodes ᐧ \(TimeInterval(total_duration).hoursAndMinutes)"
+    }
+}
+
+extension EpisodeView {
+    
+    var dateFormatter: DateFormatter {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        return df
+    }
+    
+    var durationAndDate: String {
+        "\(TimeInterval(media_duration).hoursAndMinutes) - \(dateFormatter.string(from: released_at))"
+    }
+}
+
 let allCollections = Endpoint<[CollectionView]>(
     json: .get,
     url: URL(string: "https://talk.objc.io/collections.json")!

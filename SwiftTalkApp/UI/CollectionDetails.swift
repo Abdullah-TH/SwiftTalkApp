@@ -46,19 +46,38 @@ struct CollectionDetails: View {
     }
     
     var body: some View {
-        VStack {
-            Text(collection.title)
-                .font(.largeTitle)
-                .lineLimit(nil)
+        VStack(alignment: .leading) {
             if imageResource.value != nil {
                 Image(uiImage: imageResource.value!)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
-            Text(collection.description)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(collection.title)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .lineLimit(nil)
+                    if collection.new {
+                        newBadge
+                    }
+                }
+                Text(collection.episodeCountAndTotalDuration)
+                    .foregroundColor(.gray)
+                    .padding([.bottom])
+                Text(collection.description)
+                .lineLimit(nil)
+            }
+            .padding([.leading, .trailing])
             List {
                 ForEach(collectionEpisodes, id: \.id) { episode in
-                    Text(episode.title)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(episode.title)
+                            .font(.headline)
+                        Text(episode.durationAndDate)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
                 }
             }
         }
