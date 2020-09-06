@@ -14,11 +14,17 @@ struct CollectionRow: View {
     let collection: CollectionView
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(collection.title)
-            Text("\(collection.episodes_count) episodes - \(TimeInterval(collection.total_duration).hoursAndMinutes)")
-                .font(.caption)
-                .foregroundColor(.gray)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(collection.title)
+                Text("\(collection.episodes_count) episodes - \(TimeInterval(collection.total_duration).hoursAndMinutes)")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            if collection.new {
+                Spacer()
+                newBadge
+            }
         }
     }
 }
