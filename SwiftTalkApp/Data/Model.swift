@@ -41,31 +41,6 @@ let allEpisodes = Endpoint<[EpisodeView]>(
     url: URL(string: "https://talk.objc.io/episodes.json")!
 )
 
-import Combine
-final class Store: ObservableObject {
-    
-    let objectWillChange: AnyPublisher<(), Never>
-    let sharedCollections = Resource(endpoint: allCollections)
-    let sharedEpisodes = Resource(endpoint: allEpisodes)
-    
-    init() {
-        objectWillChange = sharedCollections.objectWillChange.zip(sharedEpisodes.objectWillChange).map { _ in () }.eraseToAnyPublisher()
-    }
-    
-    var loaded: Bool {
-        sharedCollections.value != nil && sharedEpisodes.value != nil
-    }
-    
-    var collections: [CollectionView] {
-        sharedCollections.value ?? []
-    }
-    
-    var episodes: [EpisodeView] {
-        sharedEpisodes.value ?? []
-    }
-}
-
-let sharedStore = Store()
 
 func sample<A: Codable>(name: String) -> A {
     let url = Bundle.main.url(forResource: name, withExtension: "json")!
