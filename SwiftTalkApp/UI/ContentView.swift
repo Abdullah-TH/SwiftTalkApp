@@ -17,8 +17,18 @@ struct ContentView: View {
             if !store.loaded {
                 Text("Loading...")
             } else {
-                NavigationView {
-                    CollectionsList(collections: store.collections)
+                TabView {
+                    NavigationView {
+                        CollectionsList(collections: store.collections)
+                    }
+                    .tabItem { Text("Collections") }
+                    .tag(0)
+                    
+                    NavigationView {
+                        AllEpisodes(episodes: store.episodes)
+                    }
+                    .tabItem { Text("All Episodes") }
+                    .tag(1)
                 }
             }
         }
