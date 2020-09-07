@@ -11,6 +11,7 @@ import TinyNetworking
 import Model
 
 extension CollectionView: Identifiable {}
+extension EpisodeView: Identifiable {}
 
 extension CollectionView {
     var episodeCountAndTotalDuration: String {

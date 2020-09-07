@@ -16,6 +16,8 @@
 		6AD857AE25055F59003DA3A8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857AD25055F59003DA3A8 /* Player.swift */; };
 		6AD857B02506243D003DA3A8 /* EpisodeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857AF2506243D003DA3A8 /* EpisodeProgress.swift */; };
 		6AD857B225062B2C003DA3A8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857B125062B2C003DA3A8 /* Account.swift */; };
+		6AD857B52506430E003DA3A8 /* KeychainItem in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD857B42506430E003DA3A8 /* KeychainItem */; };
+		6AD857B725066777003DA3A8 /* AuthenticationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857B625066777003DA3A8 /* AuthenticationHelpers.swift */; };
 		6AF5446524EAF364006AFDF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5446424EAF364006AFDF8 /* AppDelegate.swift */; };
 		6AF5446724EAF364006AFDF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5446624EAF364006AFDF8 /* SceneDelegate.swift */; };
 		6AF5446924EAF364006AFDF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5446824EAF364006AFDF8 /* ContentView.swift */; };
@@ -62,6 +64,7 @@
 		6AD857AD25055F59003DA3A8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6AD857AF2506243D003DA3A8 /* EpisodeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeProgress.swift; sourceTree = "<group>"; };
 		6AD857B125062B2C003DA3A8 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		6AD857B625066777003DA3A8 /* AuthenticationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHelpers.swift; sourceTree = "<group>"; };
 		6AF5446124EAF364006AFDF8 /* SwiftTalkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTalkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF5446424EAF364006AFDF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF5446624EAF364006AFDF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 				6AF5449B24EAF4BE006AFDF8 /* ViewHelpers in Frameworks */,
 				6AF5449924EAF4BE006AFDF8 /* Model in Frameworks */,
 				6AF5449624EAF40F006AFDF8 /* TinyNetworking in Frameworks */,
+				6AD857B52506430E003DA3A8 /* KeychainItem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +203,7 @@
 				6AF544A424EAF6BC006AFDF8 /* Model.swift */,
 				6AD857A7250550CD003DA3A8 /* Store.swift */,
 				6AD857AF2506243D003DA3A8 /* EpisodeProgress.swift */,
+				6AD857B625066777003DA3A8 /* AuthenticationHelpers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				6AF5449524EAF40F006AFDF8 /* TinyNetworking */,
 				6AF5449824EAF4BE006AFDF8 /* Model */,
 				6AF5449A24EAF4BE006AFDF8 /* ViewHelpers */,
+				6AD857B42506430E003DA3A8 /* KeychainItem */,
 			);
 			productName = SwiftTalkApp;
 			productReference = 6AF5446124EAF364006AFDF8 /* SwiftTalkApp.app */;
@@ -299,6 +305,7 @@
 			packageReferences = (
 				6AF5449424EAF40F006AFDF8 /* XCRemoteSwiftPackageReference "tiny-networking" */,
 				6AF5449724EAF4BE006AFDF8 /* XCRemoteSwiftPackageReference "swift-talk-shared" */,
+				6AD857B32506430E003DA3A8 /* XCRemoteSwiftPackageReference "keychain-item" */,
 			);
 			productRefGroup = 6AF5446224EAF364006AFDF8 /* Products */;
 			projectDirPath = "";
@@ -347,6 +354,7 @@
 			files = (
 				6AF544A524EAF6BC006AFDF8 /* Model.swift in Sources */,
 				6AF544A724EAFAC6006AFDF8 /* CollectionsList.swift in Sources */,
+				6AD857B725066777003DA3A8 /* AuthenticationHelpers.swift in Sources */,
 				6A63E79225001E340035A07D /* CollectionRow.swift in Sources */,
 				6AD857A425053AC6003DA3A8 /* NewBadge.swift in Sources */,
 				6AD857AE25055F59003DA3A8 /* Player.swift in Sources */,
@@ -687,6 +695,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6AD857B32506430E003DA3A8 /* XCRemoteSwiftPackageReference "keychain-item" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objcio/keychain-item";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		6AF5449424EAF40F006AFDF8 /* XCRemoteSwiftPackageReference "tiny-networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/objcio/tiny-networking";
@@ -706,6 +722,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6AD857B42506430E003DA3A8 /* KeychainItem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AD857B32506430E003DA3A8 /* XCRemoteSwiftPackageReference "keychain-item" */;
+			productName = KeychainItem;
+		};
 		6AF5449524EAF40F006AFDF8 /* TinyNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6AF5449424EAF40F006AFDF8 /* XCRemoteSwiftPackageReference "tiny-networking" */;

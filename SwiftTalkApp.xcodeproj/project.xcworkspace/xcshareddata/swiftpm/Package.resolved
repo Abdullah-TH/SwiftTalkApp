@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "KeychainItem",
+        "repositoryURL": "https://github.com/objcio/keychain-item",
+        "state": {
+          "branch": "master",
+          "revision": "31a813bf83ee302097c1ba8ece74313cf7f2a9e7",
+          "version": null
+        }
+      },
+      {
         "package": "swift-talk-shared",
         "repositoryURL": "https://github.com/objcio/swift-talk-shared",
         "state": {
