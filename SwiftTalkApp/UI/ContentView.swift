@@ -29,6 +29,12 @@ struct ContentView: View {
                     }
                     .tabItem { Text("All Episodes") }
                     .tag(1)
+                    
+                    NavigationView {
+                        Account()
+                    }
+                    .tabItem { Text("Account") }
+                    .tag(2)
                 }
             }
         }

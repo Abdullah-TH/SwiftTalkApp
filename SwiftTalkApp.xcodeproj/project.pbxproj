@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6A63E79225001E340035A07D /* CollectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63E79125001E340035A07D /* CollectionRow.swift */; };
-		6AD857A425053AC6003DA3A8 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857A325053AC6003DA3A8 /* ViewHelpers.swift */; };
+		6AD857A425053AC6003DA3A8 /* NewBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857A325053AC6003DA3A8 /* NewBadge.swift */; };
 		6AD857A625054889003DA3A8 /* AllEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857A525054889003DA3A8 /* AllEpisodes.swift */; };
 		6AD857A8250550CD003DA3A8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857A7250550CD003DA3A8 /* Store.swift */; };
 		6AD857AA2505516E003DA3A8 /* EpisodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857A92505516E003DA3A8 /* EpisodeItem.swift */; };
 		6AD857AC25055C72003DA3A8 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857AB25055C72003DA3A8 /* Episode.swift */; };
 		6AD857AE25055F59003DA3A8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857AD25055F59003DA3A8 /* Player.swift */; };
 		6AD857B02506243D003DA3A8 /* EpisodeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857AF2506243D003DA3A8 /* EpisodeProgress.swift */; };
+		6AD857B225062B2C003DA3A8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD857B125062B2C003DA3A8 /* Account.swift */; };
 		6AF5446524EAF364006AFDF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5446424EAF364006AFDF8 /* AppDelegate.swift */; };
 		6AF5446724EAF364006AFDF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5446624EAF364006AFDF8 /* SceneDelegate.swift */; };
 		6AF5446924EAF364006AFDF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5446824EAF364006AFDF8 /* ContentView.swift */; };
@@ -53,13 +54,14 @@
 
 /* Begin PBXFileReference section */
 		6A63E79125001E340035A07D /* CollectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRow.swift; sourceTree = "<group>"; };
-		6AD857A325053AC6003DA3A8 /* ViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
+		6AD857A325053AC6003DA3A8 /* NewBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBadge.swift; sourceTree = "<group>"; };
 		6AD857A525054889003DA3A8 /* AllEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEpisodes.swift; sourceTree = "<group>"; };
 		6AD857A7250550CD003DA3A8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		6AD857A92505516E003DA3A8 /* EpisodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeItem.swift; sourceTree = "<group>"; };
 		6AD857AB25055C72003DA3A8 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		6AD857AD25055F59003DA3A8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6AD857AF2506243D003DA3A8 /* EpisodeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeProgress.swift; sourceTree = "<group>"; };
+		6AD857B125062B2C003DA3A8 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		6AF5446124EAF364006AFDF8 /* SwiftTalkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTalkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF5446424EAF364006AFDF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF5446624EAF364006AFDF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,7 +186,8 @@
 				6AD857A92505516E003DA3A8 /* EpisodeItem.swift */,
 				6AD857AB25055C72003DA3A8 /* Episode.swift */,
 				6AD857AD25055F59003DA3A8 /* Player.swift */,
-				6AD857A325053AC6003DA3A8 /* ViewHelpers.swift */,
+				6AD857B125062B2C003DA3A8 /* Account.swift */,
+				6AD857A325053AC6003DA3A8 /* NewBadge.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -345,8 +348,9 @@
 				6AF544A524EAF6BC006AFDF8 /* Model.swift in Sources */,
 				6AF544A724EAFAC6006AFDF8 /* CollectionsList.swift in Sources */,
 				6A63E79225001E340035A07D /* CollectionRow.swift in Sources */,
-				6AD857A425053AC6003DA3A8 /* ViewHelpers.swift in Sources */,
+				6AD857A425053AC6003DA3A8 /* NewBadge.swift in Sources */,
 				6AD857AE25055F59003DA3A8 /* Player.swift in Sources */,
+				6AD857B225062B2C003DA3A8 /* Account.swift in Sources */,
 				6AD857B02506243D003DA3A8 /* EpisodeProgress.swift in Sources */,
 				6AF5446524EAF364006AFDF8 /* AppDelegate.swift in Sources */,
 				6AD857A625054889003DA3A8 /* AllEpisodes.swift in Sources */,

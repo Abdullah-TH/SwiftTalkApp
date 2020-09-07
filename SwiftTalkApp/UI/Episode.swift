@@ -62,6 +62,7 @@ struct Episode: View {
             )
                 .aspectRatio(16/9, contentMode: .fit)
             Slider(value: $progress.progress, in: 0...TimeInterval(episode.media_duration))
+            Spacer()
         }
     }
 }

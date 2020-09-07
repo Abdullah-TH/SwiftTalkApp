@@ -23,7 +23,7 @@ struct CollectionRow: View {
             }
             if collection.new {
                 Spacer()
-                newBadge
+                NewBadge()
             }
         }
     }

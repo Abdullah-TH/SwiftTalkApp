@@ -59,7 +59,7 @@ struct CollectionDetails: View {
                         .fontWeight(.bold)
                         .lineLimit(nil)
                     if collection.new {
-                        newBadge
+                        NewBadge()
                     }
                 }
                 Text(collection.episodeCountAndTotalDuration)
